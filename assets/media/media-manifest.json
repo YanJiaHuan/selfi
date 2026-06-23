@@ -41,6 +41,36 @@
       "type": "image"
     }
   ],
+  "papers": [
+    {
+      "path": "assets/media/papers/Battle of the large language models.png",
+      "type": "image"
+    },
+    {
+      "path": "assets/media/papers/CoinRobot.png",
+      "type": "image"
+    },
+    {
+      "path": "assets/media/papers/Generalized Robot Learning Framework.png",
+      "type": "image"
+    },
+    {
+      "path": "assets/media/papers/Humor prediction.jpg",
+      "type": "image"
+    },
+    {
+      "path": "assets/media/papers/robograsp A universal grasping policy.png",
+      "type": "image"
+    },
+    {
+      "path": "assets/media/papers/Spatial robograsp.png",
+      "type": "image"
+    },
+    {
+      "path": "assets/media/papers/Spatially Visual Perception for End-to-End Robotic.png",
+      "type": "image"
+    }
+  ],
   "robotics-simulation": [
     {
       "path": "assets/media/robotics-simulation/Bunker+Elite1.png",

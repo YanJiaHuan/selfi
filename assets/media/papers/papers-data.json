@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Battle of the large language models: Dolly vs llama vs vicuna vs guanaco vs bard vs chatgpt-A text-to-sql parsing comparison",
+    "link": "https://scholar.google.com.hk/citations?view_op=view_citation&hl=zh-CN&user=_qGKRv8AAAAJ&citation_for_view=_qGKRv8AAAAJ:9yKSN-GCB0IC",
+    "authors": "Shuo Sun, Yuchen Zhang, JiaHuan Yan, Yuze Gao, Donovan Ong, Bin Chen, Jian Su",
+    "image": "assets/media/papers/Battle of the large language models.png",
+    "is_first_author": false
+  },
+  {
+    "title": "Robograsp: A universal grasping policy for robust robotic control",
+    "link": "https://arxiv.org/abs/2502.03072",
+    "authors": "Yiqi Huang, Travis Davies, JiaHuan Yan, Xiang Chen, Yu Tian, Luhui Hu",
+    "image": "assets/media/papers/robograsp A universal grasping policy.png",
+    "is_first_author": false
+  },
+  {
+    "title": "Spatial robograsp: Generalized robotic grasping control policy",
+    "link": "https://arxiv.org/abs/2505.20814",
+    "authors": "Yiqi Huang, Travis Davies, JiaHuan Yan, Jiankai Sun, Xiang Chen, Luhui Hu",
+    "image": "assets/media/papers/Spatial robograsp.png",
+    "is_first_author": false
+  },
+  {
+    "title": "Spatially Visual Perception for End-to-End Robotic Learning",
+    "link": "https://arxiv.org/abs/2411.17458",
+    "authors": "Travis Davies, JiaHuan Yan, Xiang Chen, Yu Tian, Yueting Zhuang, Yiqi Huang, Luhui Hu",
+    "image": "assets/media/papers/Spatially Visual Perception for End-to-End Robotic.png",
+    "is_first_author": false
+  },
+  {
+    "title": "Humor prediction with bi-directional long-short term memory",
+    "link": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11933/119330J/Humor-prediction-with-bi-directional-long-short-term-memory/10.1117/12.2615169.short",
+    "authors": "JiaHuan Yan et al.",
+    "image": "assets/media/papers/Humor prediction.jpg",
+    "is_first_author": true
+  },
+  {
+    "title": "CoinRobot: Generalized End-to-end Robotic Learning for Physical Intelligence",
+    "link": "https://arxiv.org/abs/2503.05316",
+    "authors": "Yu Zhao, Huxian Liu, Xiang Chen, Jiankai Sun, JiaHuan Yan, Luhui Hu",
+    "image": "assets/media/papers/CoinRobot.png",
+    "is_first_author": false
+  },
+  {
+    "title": "Generalized Robot Learning Framework",
+    "link": "https://arxiv.org/abs/2409.12061",
+    "authors": "JiaHuan Yan, Zhouyang Hong, Yu Zhao, Yu Tian, Yunxin Liu, Travis Davies, Luhui Hu",
+    "image": "assets/media/papers/Generalized Robot Learning Framework.png",
+    "is_first_author": true
+  }
+]

@@ -13,4 +13,7 @@ test("index exposes four technical annual capability chapters", () => {
   assert.match(html, /data-skill="robotics-simulation"/);
   assert.match(html, /data-skill="foundation-models-training"/);
   assert.match(html, /data-skill="ai-infrastructure"/);
+  assert.match(html, /class="hero-portrait"/);
+  assert.match(html, /id="papers-list"/);
+  assert.match(html, /papers-data\.json/);
 });

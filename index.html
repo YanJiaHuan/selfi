@@ -102,6 +102,34 @@
             margin: 0 auto;
         }
 
+        .hero-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.72fr);
+            gap: 42px;
+            align-items: start;
+        }
+
+        .hero-copy {
+            min-width: 0;
+        }
+
+        .hero-portrait {
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+            border-radius: 10px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0)), var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        }
+
+        .hero-portrait img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 18%;
+            display: block;
+        }
+
         .hero h1 {
             font-family: var(--font-display);
             font-size: 64px;
@@ -195,11 +223,19 @@
             .hero {
                 padding: 40px 20px 60px 20px;
             }
+            .hero-layout {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
             .hero h1 {
                 font-size: 44px;
             }
             .hero .subtitle {
                 font-size: 11px;
+            }
+            .hero-portrait {
+                aspect-ratio: 16 / 15;
+                max-width: 560px;
             }
         }
 
@@ -504,48 +540,71 @@
             }
         }
 
-        /* Publications */
-        .publications-list {
-            max-width: 800px;
+        /* Papers */
+        .papers-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 40px;
         }
 
-        .publication-item {
+        .paper-row {
+            display: grid;
+            grid-template-columns: 220px minmax(0, 1fr);
+            gap: 22px;
+            align-items: start;
             background: var(--bg-card);
             padding: 20px;
-            margin-bottom: 12px;
-            border-radius: 4px;
+            border-radius: 6px;
             border: 1px solid rgba(255, 255, 255, 0.45);
-            transition: all 0.3s ease;
+            transition: background 0.25s ease, transform 0.25s ease;
         }
 
-        .publication-item:hover {
+        .paper-row:hover {
             background: var(--bg-hover);
+            transform: translateY(-1px);
         }
 
-        .publication-item h3 {
+        .paper-thumb {
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            overflow: hidden;
+            border-radius: 4px;
+            background: linear-gradient(135deg, #e8e3dc 0%, var(--bg-card) 100%);
+        }
+
+        .paper-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .paper-body h3 {
             font-family: var(--font-display);
             font-size: 24px;
             font-weight: 600;
             margin-bottom: 6px;
         }
 
-        .publication-item .venue {
-            font-size: 12px;
-            color: var(--text-secondary);
-            margin-bottom: 8px;
-        }
-
-        .publication-item a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 12px;
-            border-bottom: 1px solid var(--accent);
-            transition: all 0.3s ease;
-        }
-
-        .publication-item a:hover {
+        .paper-body a {
             color: var(--text-primary);
-            border-bottom-color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .paper-body a:hover {
+            color: var(--text-secondary);
+        }
+
+        .paper-authors {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .paper-authors strong {
+            color: var(--text-primary);
         }
 
         footer {
@@ -570,6 +629,12 @@
             .skill-item {
                 padding: 22px 18px;
             }
+            .paper-row {
+                grid-template-columns: 1fr;
+            }
+            .paper-thumb {
+                max-width: 360px;
+            }
         }
     </style>
 </head>
@@ -578,38 +643,46 @@
         <div class="logo">YJH</div>
         <ul>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#publications">Publications</a></li>
+            <li><a href="#publications">Papers</a></li>
         </ul>
     </nav>
 
     <section class="hero">
-        <h1>JiaHuan Yan</h1>
-        <p class="subtitle">AI Engineer | Roboticist | AI Infrastructure</p>
+        <div class="hero-layout">
+            <div class="hero-copy">
+                <h1>JiaHuan Yan</h1>
+                <p class="subtitle">AI Engineer | Roboticist | AI Infrastructure</p>
 
-        <div class="intro-block">
-            <p>Building intelligent systems at the intersection of embodied AI (WMA & VLA), large language models, and AI Infrastructure. Currently a Senior AI Engineer and Co-founder at an embodied intelligence startup in Hangzhou, responsible for two independent tacks: data platform and AI compute infrastructure—ensuring data is well-managed and compute runs at peak performance.</p>
-        </div>
+                <div class="intro-block">
+                    <p>Building intelligent systems at the intersection of embodied AI (WMA & VLA), large language models, and AI Infrastructure. Currently a Senior AI Engineer and Co-founder at an embodied intelligence startup in Hangzhou, responsible for two independent tacks: data platform and AI compute infrastructure—ensuring data is well-managed and compute runs at peak performance.</p>
+                </div>
 
-        <div class="intro-section">
-            <h3>Education</h3>
-            <ul>
-                <li>M.S. in Intelligent Systems, National University of Singapore (2022 - 2023)</li>
-                <li>B.S. in Electrical Engineering, NanJing Normal University (2018 - 2022)</li>
-            </ul>
-        </div>
+                <div class="intro-section">
+                    <h3>Education</h3>
+                    <ul>
+                        <li>M.S. in Intelligent Systems, National University of Singapore (2022 - 2023)</li>
+                        <li>B.S. in Electrical Engineering, NanJing Normal University (2018 - 2022)</li>
+                    </ul>
+                </div>
 
-        <div class="intro-section">
-            <h3>Working Experience</h3>
-            <ul>
-                <li>Senior AI Engineer & Co-founder at embodied intelligence startup (May 2024 - Present) — Leading data platform and compute infrastructure development</li>
-                <li>AI Research Intern at A*STAR, Singapore (Apr 2023 - Aug 2023) — Developed LLM-based Text-to-SQL system, conducted research on prompt engineering and LoRA fine-tuning</li>
-            </ul>
-        </div>
+                <div class="intro-section">
+                    <h3>Working Experience</h3>
+                    <ul>
+                        <li>Senior AI Engineer & Co-founder at embodied intelligence startup (May 2024 - Present) — Leading data platform and compute infrastructure development</li>
+                        <li>AI Research Intern at A*STAR, Singapore (Apr 2023 - Aug 2023) — Developed LLM-based Text-to-SQL system, conducted research on prompt engineering and LoRA fine-tuning</li>
+                    </ul>
+                </div>
 
-        <div class="contact-links">
-            <a href="mailto:yjh1337842463@gmail.com" class="contact-link">Email</a>
-            <a href="https://www.linkedin.com/in/jiahuan-yan-416757185/" class="contact-link">LinkedIn</a>
-            <a href="https://github.com/YanJiaHuan" class="contact-link">GitHub</a>
+                <div class="contact-links">
+                    <a href="mailto:yjh1337842463@gmail.com" class="contact-link">Email</a>
+                    <a href="https://www.linkedin.com/in/jiahuan-yan-416757185/" class="contact-link">LinkedIn</a>
+                    <a href="https://github.com/YanJiaHuan" class="contact-link">GitHub</a>
+                </div>
+            </div>
+
+            <div class="hero-portrait">
+                <img src="assets/media/me.JPG" alt="JiaHuan Yan speaking at an event">
+            </div>
         </div>
     </section>
 
@@ -715,24 +788,8 @@
     </section>
 
     <section class="content-section" id="publications">
-        <h2 class="section-title">Publications & Research</h2>
-        <div class="publications-list">
-            <div class="publication-item">
-                <h3>Whole Word Masking for Poetry Semantic Understanding</h3>
-                <p class="venue">EMNLP 2023 Findings</p>
-                <a href="https://aclanthology.org/2023.findings-emnlp.750.pdf" target="_blank">View on ACL Anthology →</a>
-            </div>
-            <div class="publication-item">
-                <h3>Recent LLM Research Work</h3>
-                <p class="venue">ArXiv 2025</p>
-                <a href="https://scholar.google.com/citations?user=_qGKRv8AAAAJ&hl=en" target="_blank">View Google Scholar Profile →</a>
-            </div>
-            <div class="publication-item">
-                <h3>Multiple Research Papers</h3>
-                <p class="venue">Various venues including SPIE, ACL</p>
-                <a href="https://scholar.google.com/citations?user=_qGKRv8AAAAJ&hl=en" target="_blank">View all publications →</a>
-            </div>
-        </div>
+        <h2 class="section-title">Papers</h2>
+        <div class="papers-list" id="papers-list"></div>
     </section>
 
     <footer>
@@ -930,18 +987,70 @@
             return response.json();
         }
 
+        async function loadPapersData() {
+            const response = await fetch('assets/media/papers/papers-data.json');
+
+            if (!response.ok) {
+                throw new Error('Failed to load papers data');
+            }
+
+            return response.json();
+        }
+
+        function renderAuthors(paper) {
+            if (!paper.authors) {
+                return '';
+            }
+
+            return paper.is_first_author
+                ? paper.authors.replace('JiaHuan Yan', '<strong>JiaHuan Yan</strong>')
+                : paper.authors;
+        }
+
+        function renderPapers(papers) {
+            const list = document.getElementById('papers-list');
+
+            if (!list) {
+                return;
+            }
+
+            list.replaceChildren(...papers.map((paper) => {
+                const row = document.createElement('article');
+                row.className = 'paper-row';
+                row.innerHTML = `
+                    <div class="paper-thumb">
+                        <img src="${paper.image}" alt="${paper.title}" loading="lazy">
+                    </div>
+                    <div class="paper-body">
+                        <h3><a href="${paper.link}" target="_blank" rel="noreferrer">${paper.title}</a></h3>
+                        <p class="paper-authors">${renderAuthors(paper)}</p>
+                    </div>
+                `;
+                return row;
+            }));
+        }
+
         document.addEventListener('DOMContentLoaded', async function() {
             try {
-                const manifest = await loadMediaManifest();
+                const [manifest, papers] = await Promise.all([
+                    loadMediaManifest(),
+                    loadPapersData(),
+                ]);
 
                 document.querySelectorAll('.media-gallery').forEach((gallery) => {
                     const skill = gallery.dataset.skill;
                     renderGallery(gallery, manifest[skill] || []);
                 });
+
+                renderPapers(papers);
             } catch (error) {
                 document.querySelectorAll('.media-gallery').forEach((gallery) => {
                     gallery.innerHTML = '<div class="media-empty">Failed To Load Media</div>';
                 });
+                const papersList = document.getElementById('papers-list');
+                if (papersList) {
+                    papersList.innerHTML = '<div class="media-empty">Failed To Load Papers</div>';
+                }
                 console.error(error);
             }
         });

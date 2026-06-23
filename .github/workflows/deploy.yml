@@ -30,6 +30,9 @@ jobs:
       - name: Generate media manifest
         run: node scripts/generate-media-manifest.mjs
 
+      - name: Generate papers data
+        run: node scripts/generate-papers-data.mjs
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 

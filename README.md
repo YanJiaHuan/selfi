@@ -109,6 +109,21 @@ node scripts/generate-media-manifest.mjs
 ```
 3. Commit the updated media files and `assets/media/media-manifest.json`
 
+To update the portrait:
+
+1. Replace `assets/media/me.JPG`
+2. Commit the updated image
+
+To update papers:
+
+1. Update `assets/media/papers/info`
+2. Add or replace screenshots in `assets/media/papers/`
+3. Run:
+```bash
+node scripts/generate-papers-data.mjs
+```
+4. Commit the updated screenshots and `assets/media/papers/papers-data.json`
+
 Supported media types:
 
 - Images: `jpg`, `jpeg`, `png`, `gif`, `webp`
@@ -118,6 +133,7 @@ Notes:
 
 - Files ending in `-original` are ignored by the manifest generator, which is useful for keeping local backups next to production media
 - Mixed image/video folders are rendered automatically by the frontend carousel
+- Paper screenshots are normalized in layout with a fixed thumbnail container, so source image sizes can differ
 
 ## 🎨 Customization
 
