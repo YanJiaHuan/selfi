@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Backups
+*.bak
+*.tmp
+
+# Local brainstorming artifacts
+.superpowers/
+
+# Local source archive not meant for publishing
+工作经历/

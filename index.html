@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JiaHuan Yan - AI Engineer</title>
+    <meta name="description" content="JiaHuan Yan - AI Engineer, Roboticist, AI Infrastructure. Portfolio showcasing embodied AI, LLM research, and infrastructure projects.">
+    <meta name="keywords" content="AI, Machine Learning, Robotics, Infrastructure, Research">
+    <meta name="author" content="JiaHuan Yan">
+    <meta property="og:title" content="JiaHuan Yan - AI Engineer">
+    <meta property="og:description" content="Professional portfolio of JiaHuan Yan">
+    <meta property="og:type" content="website">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #f7f3ee;
+            --bg-card: #ebe4da;
+            --bg-hover: #e4dbd0;
+            --bg-ink: #221f1a;
+            --text-primary: #27231e;
+            --text-secondary: #6e665c;
+            --text-muted: #948a7d;
+            --accent: #b7ab9c;
+            --accent-strong: #8e7e6b;
+            --line: rgba(39, 35, 30, 0.14);
+            --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+            --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            --font-meta: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.65;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            background: var(--bg-primary);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--line);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 0.08em;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 12px;
+            font-family: var(--font-meta);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 20px;
+                padding: 15px 20px;
+            }
+            nav ul {
+                gap: 15px;
+            }
+        }
+
+        .hero {
+            padding: 72px 40px 92px 40px;
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: 64px;
+            line-height: 0.96;
+            margin-bottom: 18px;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+        }
+
+        .hero .subtitle {
+            font-size: 13px;
+            font-family: var(--font-meta);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-weight: 500;
+        }
+
+        .intro-block {
+            margin-bottom: 40px;
+        }
+
+        .intro-block p {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.95;
+            max-width: 760px;
+        }
+
+        .intro-section {
+            margin-bottom: 40px;
+        }
+
+        .intro-section h3 {
+            font-family: var(--font-meta);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .intro-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .intro-section li {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .intro-section li:before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: flex-start;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .contact-link {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 13px;
+            border-bottom: 1px solid var(--accent-strong);
+            padding-bottom: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: var(--text-secondary);
+            border-bottom-color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 20px 60px 20px;
+            }
+            .hero h1 {
+                font-size: 44px;
+            }
+            .hero .subtitle {
+                font-size: 11px;
+            }
+        }
+
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid var(--line);
+            letter-spacing: -0.03em;
+        }
+
+        @media (max-width: 768px) {
+            .content-section {
+                padding: 0 20px;
+            }
+            .section-title {
+                font-size: 32px;
+            }
+        }
+
+        /* Capability Chapters */
+        .skills-list {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            margin-bottom: 60px;
+        }
+
+        .skill-item {
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)) ,
+                var(--bg-card);
+            padding: 28px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: var(--bg-hover);
+            transform: translateY(-2px);
+        }
+
+        .skill-header {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+            gap: 28px;
+            margin-bottom: 22px;
+            padding-bottom: 22px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .skill-title-block {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .skill-kicker {
+            font-family: var(--font-meta);
+            font-size: 11px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .skill-heading-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            align-items: end;
+        }
+
+        .skill-header h3 {
+            font-family: var(--font-display);
+            font-size: 34px;
+            line-height: 1.02;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+        .skill-period {
+            font-family: var(--font-meta);
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .skill-header .description {
+            font-size: 16px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            max-width: 52ch;
+        }
+
+        .skill-summary {
+            display: flex;
+            align-items: end;
+        }
+
+        .skill-summary p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .skill-meta {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .skill-meta-item {
+            padding-top: 12px;
+            border-top: 1px solid var(--line);
+        }
+
+        .skill-meta-label {
+            display: block;
+            margin-bottom: 8px;
+            font-family: var(--font-meta);
+            font-size: 10px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .skill-meta-text {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .media-gallery {
+            margin-top: 16px;
+            display: grid;
+            grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.85fr);
+            gap: 14px;
+            align-items: stretch;
+        }
+
+        .media-stage,
+        .media-strip-item {
+            background: linear-gradient(135deg, #e8e3dc 0%, var(--bg-card) 100%);
+            border-radius: 3px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .media-gallery.gallery-solo {
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        .media-stage {
+            aspect-ratio: 16 / 9.8;
+            min-height: 320px;
+        }
+
+        .media-stage::after {
+            content: attr(data-caption);
+            position: absolute;
+            left: 12px;
+            bottom: 16px;
+            font-size: 10px;
+            font-family: var(--font-meta);
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.92);
+            background: rgba(42, 42, 42, 0.45);
+            padding: 6px 8px;
+            border-radius: 2px;
+            backdrop-filter: blur(6px);
+        }
+
+        .media-slot-viewport {
+            width: 100%;
+            height: 100%;
+        }
+
+        .media-strip {
+            display: grid;
+            grid-template-rows: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        .media-strip-item {
+            aspect-ratio: 4 / 3;
+            min-height: 92px;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+            appearance: none;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .media-strip-item:hover {
+            transform: translateY(-1px);
+        }
+
+        .media-strip-item::after {
+            content: attr(data-caption);
+            position: absolute;
+            left: 10px;
+            bottom: 14px;
+            font-size: 9px;
+            font-family: var(--font-meta);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.92);
+            background: rgba(42, 42, 42, 0.45);
+            padding: 5px 6px;
+            border-radius: 2px;
+        }
+
+        .media-slot-pager {
+            position: absolute;
+            right: 10px;
+            bottom: 12px;
+            display: flex;
+            gap: 6px;
+            z-index: 3;
+        }
+
+        .media-strip-item .media-slot-pager {
+            right: 8px;
+            bottom: 8px;
+        }
+
+        .media-slot-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.78);
+            background: rgba(255, 255, 255, 0.18);
+            cursor: pointer;
+            appearance: none;
+            padding: 0;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .media-slot-dot:hover {
+            transform: scale(1.08);
+        }
+
+        .media-slot-dot.is-active {
+            background: rgba(255, 255, 255, 0.96);
+        }
+
+        .media-stage img,
+        .media-stage video,
+        .media-strip-item img,
+        .media-strip-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .media-empty {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 180px;
+            color: #7d756d;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .media-strip-item.is-active,
+        .media-stage.is-active {
+            outline: 1px solid rgba(42, 42, 42, 0.14);
+        }
+
+        @media (max-width: 900px) {
+            .skill-header {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .skill-heading-row {
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .skill-meta {
+                grid-template-columns: 1fr;
+            }
+
+            .media-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .media-stage {
+                min-height: 240px;
+            }
+
+            .media-strip {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                grid-template-rows: none;
+            }
+        }
+
+        /* Publications */
+        .publications-list {
+            max-width: 800px;
+        }
+
+        .publication-item {
+            background: var(--bg-card);
+            padding: 20px;
+            margin-bottom: 12px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            transition: all 0.3s ease;
+        }
+
+        .publication-item:hover {
+            background: var(--bg-hover);
+        }
+
+        .publication-item h3 {
+            font-family: var(--font-display);
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .publication-item .venue {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .publication-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 12px;
+            border-bottom: 1px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+
+        .publication-item a:hover {
+            color: var(--text-primary);
+            border-bottom-color: var(--text-primary);
+        }
+
+        footer {
+            background: var(--bg-card);
+            padding: 30px 40px;
+            text-align: center;
+            border-top: 1px solid #e8e3dc;
+            color: var(--text-secondary);
+            font-size: 12px;
+            margin-top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                padding: 20px;
+                font-size: 11px;
+                margin-top: 60px;
+            }
+            .media-strip {
+                grid-template-columns: 1fr;
+            }
+            .skill-item {
+                padding: 22px 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">JY</div>
+        <ul>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#publications">Publications</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>JiaHuan Yan</h1>
+        <p class="subtitle">AI Engineer | Roboticist | AI Infrastructure</p>
+
+        <div class="intro-block">
+            <p>Building intelligent systems at the intersection of embodied AI, large language models, and infrastructure. Currently a Senior AI Engineer and Co-founder at an embodied intelligence startup in Hangzhou, focusing on data platforms and compute infrastructure.</p>
+        </div>
+
+        <div class="intro-section">
+            <h3>Education</h3>
+            <ul>
+                <li>M.S. in Intelligent Systems, National University of Singapore (2022 - 2023)</li>
+                <li>B.S. in Electrical Engineering (2018 - 2022)</li>
+            </ul>
+        </div>
+
+        <div class="intro-section">
+            <h3>Working Experience</h3>
+            <ul>
+                <li>Senior AI Engineer & Co-founder at embodied intelligence startup (May 2024 - Present) — Leading data platform and compute infrastructure development, architecting multi-node training clusters, optimizing resource allocation</li>
+                <li>AI Research Intern at A*STAR, Singapore (Apr 2023 - Aug 2023) — Developed LLM-based Text-to-SQL system, conducted research on prompt engineering and LoRA fine-tuning</li>
+            </ul>
+        </div>
+
+        <div class="contact-links">
+            <a href="mailto:Evelina_Blakekvj@bsdmail.com" class="contact-link">Email</a>
+            <a href="https://linkedin.com/in/jiahuan-yan" class="contact-link">LinkedIn</a>
+            <a href="https://github.com/jiahuan-yan" class="contact-link">GitHub</a>
+        </div>
+    </section>
+
+    <section class="content-section" id="skills">
+        <h2 class="section-title">Selected Capability Chapters</h2>
+        <div class="skills-list">
+            <div class="skill-item">
+                <div class="skill-header">
+                    <div class="skill-title-block">
+                        <p class="skill-kicker">Section 01 / Core Capability</p>
+                        <div class="skill-heading-row">
+                            <h3>Embodied Intelligence</h3>
+                            <p class="skill-period">2024 - Present</p>
+                        </div>
+                        <p class="description">Imitation learning, VLA, WMA, robot teleoperation, and multimodal control systems for production-oriented embodied AI workflows.</p>
+                    </div>
+                    <div class="skill-summary">
+                        <p>Focused on turning robot data, operator workflows, and model behavior into something that can be trained, debugged, and iterated on in the real world.</p>
+                    </div>
+                </div>
+                <div class="skill-meta">
+                    <div class="skill-meta-item">
+                        <span class="skill-meta-label">Role</span>
+                        <p class="skill-meta-text">Senior AI engineer and co-founder building data pipelines, teleoperation workflows, and model-facing infrastructure.</p>
+                    </div>
+                    <div class="skill-meta-item">
+                        <span class="skill-meta-label">Stack</span>
+                        <p class="skill-meta-text">Imitation learning, VLA, WMA, ROS2 integration, multimodal data capture, deployment-side iteration.</p>
+                    </div>
+                    <div class="skill-meta-item">
+                        <span class="skill-meta-label">Applied In</span>
+                        <p class="skill-meta-text">Toilet-cleaning robot, TR1/TR3 operational demos, data-collection platform, multi-modal control experiments.</p>
+                    </div>
+                </div>
+                <div class="media-gallery" data-skill="embodied-intelligence"></div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-header">
+                    <div class="skill-title-block">
+                        <p class="skill-kicker">Section 02 / Runtime & Validation</p>
+                        <div class="skill-heading-row">
+                            <h3>Robotics Simulation</h3>
+                            <p class="skill-period">2024 - Present</p>
+                        </div>
+                        <p class="description">Simulation environments and lightweight browser runtimes for validating URDF assets, interaction loops, and robot-side interfaces before heavy integration.</p>
+                    </div>
+                    <div class="skill-summary">
+                        <p>Used when full simulator overhead is too expensive and the real need is a fast loop to verify robot geometry, motion logic, and operator interaction.</p>
+                    </div>
+                </div>
+                <div class="skill-meta">
+                    <div class="skill-meta-item">
+                        <span class="skill-meta-label">Role</span>
+                        <p class="skill-meta-text">Tool builder bridging robot description files, interaction code, and developer validation workflows.</p>
+                    </div>
+                    <div class="skill-meta-item">
+                        <span class="skill-meta-label">Stack</span>
+                        <p class="skill-meta-text">Isaac Sim, custom browser simulation, URDF loading, kinematics checks, interface prototyping, media-driven demos.</p>
+                    </div>
+                    <div class="skill-meta-item">
+                        <span class="skill-meta-label">Applied In</span>
+                        <p class="skill-meta-text">SimpleSim, URDF validation, simulation environment setup, internal runtime verification, data generation support.</p>
+                    </div>
+                </div>
+                <div class="media-gallery" data-skill="robotics-simulation"></div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-header">
+                    <div class="skill-title-block">
+                        <p class="skill-kicker">Section 03 / Model Research</p>
+                        <div class="skill-heading-row">
+                            <h3>Foundation Models Training</h3>
+                            <p class="skill-period">2022 - Present</p>
+                        </div>
+                        <p class="description">Large language model pre-training, prompt engineering, semantic representation learning, DDP, DeepSpeed, and LoRA-based adaptation for practical research systems.</p>
+                    </div>
+                    <div class="skill-summary">
+                        <p>This chapter connects research depth with training pragmatism: from poetry semantic understanding to Text-to-SQL systems and scalable adaptation workflows.</p>
+                    </div>
+                </div>
+                <div class="skill-meta">
+                    <div class="skill-meta-item">
+                        <span class="skill-meta-label">Role</span>
+                        <p class="skill-meta-text">Researcher and engineer translating model ideas into repeatable training recipes and measurable downstream behavior.</p>
+                    </div>
+                    <div class="skill-meta-item">
+                        <span class="skill-meta-label">Stack</span>
+                        <p class="skill-meta-text">LLM pre-training, prompt engineering, DDP, DeepSpeed, LoRA and QLoRA fine-tuning, semantic segmentation tasks.</p>
+                    </div>
+                    <div class="skill-meta-item">
+                        <span class="skill-meta-label">Applied In</span>
+                        <p class="skill-meta-text">Poetry semantic segmentation, A*STAR Text-to-SQL research, model scaling and efficient adaptation pipelines.</p>
+                    </div>
+                </div>
+                <div class="media-gallery" data-skill="foundation-models-training"></div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-header">
+                    <div class="skill-title-block">
+                        <p class="skill-kicker">Section 04 / Systems & Compute</p>
+                        <div class="skill-heading-row">
+                            <h3>AI Infrastructure</h3>
+                            <p class="skill-period">2024 - Present</p>
+                        </div>
+                        <p class="description">Server management, cluster setup, compute resource optimization, failure handling, and the operational glue that keeps training and experimentation moving.</p>
+                    </div>
+                    <div class="skill-summary">
+                        <p>The work here is less visible than model demos, but it determines whether multi-node training, resource sharing, and debugging stay reliable under pressure.</p>
+                    </div>
+                </div>
+                <div class="skill-meta">
+                    <div class="skill-meta-item">
+                        <span class="skill-meta-label">Role</span>
+                        <p class="skill-meta-text">Owner of internal compute workflows, allocation logic, and the practical reliability layer behind team training jobs.</p>
+                    </div>
+                    <div class="skill-meta-item">
+                        <span class="skill-meta-label">Stack</span>
+                        <p class="skill-meta-text">Cluster setup, server ops, GPU monitoring, incident response, workload triage, local and cloud resource management.</p>
+                    </div>
+                    <div class="skill-meta-item">
+                        <span class="skill-meta-label">Applied In</span>
+                        <p class="skill-meta-text">Multi-node training, compute allocation, GPU monitoring tooling, and day-to-day support for model development.</p>
+                    </div>
+                </div>
+                <div class="media-gallery" data-skill="ai-infrastructure"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="publications">
+        <h2 class="section-title">Publications & Research</h2>
+        <div class="publications-list">
+            <div class="publication-item">
+                <h3>Whole Word Masking for Poetry Semantic Understanding</h3>
+                <p class="venue">EMNLP 2023 Findings</p>
+                <a href="https://aclanthology.org/2023.findings-emnlp.750.pdf" target="_blank">View on ACL Anthology →</a>
+            </div>
+            <div class="publication-item">
+                <h3>Recent LLM Research Work</h3>
+                <p class="venue">ArXiv 2025</p>
+                <a href="https://scholar.google.com/citations?user=_qGKRv8AAAAJ&hl=en" target="_blank">View Google Scholar Profile →</a>
+            </div>
+            <div class="publication-item">
+                <h3>Multiple Research Papers</h3>
+                <p class="venue">Various venues including SPIE, ACL</p>
+                <a href="https://scholar.google.com/citations?user=_qGKRv8AAAAJ&hl=en" target="_blank">View all publications →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 JiaHuan Yan. Built with care.</p>
+    </footer>
+
+    <script type="module">
+        import { getSlotPlaybackBehavior, partitionMediaForGallery } from './scripts/media-layout.mjs';
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        function prettifyMediaName(filePath) {
+            const filename = filePath.split('/').pop() || '';
+            return filename.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ');
+        }
+
+        function createMediaElement(item, label, options = {}) {
+            const { loopVideo = true } = options;
+
+            if (item.type === 'video') {
+                const video = document.createElement('video');
+                video.src = item.path;
+                video.muted = true;
+                video.loop = loopVideo;
+                video.autoplay = true;
+                video.playsInline = true;
+                video.preload = 'metadata';
+                video.setAttribute('aria-label', label);
+                return video;
+            }
+
+            const image = document.createElement('img');
+            image.src = item.path;
+            image.alt = label;
+            image.loading = 'lazy';
+            return image;
+        }
+
+        function mountRotatingSlot(container, items, options = {}) {
+            const { activeClass = '', setCaption = null } = options;
+
+            if (!items.length) {
+                return;
+            }
+
+            const behavior = getSlotPlaybackBehavior(items);
+            const viewport = document.createElement('div');
+            viewport.className = 'media-slot-viewport';
+            container.replaceChildren(viewport);
+
+            let pager = null;
+            let activeIndex = 0;
+            let timerId = null;
+
+            const advance = () => {
+                activeIndex = (activeIndex + 1) % items.length;
+                render();
+            };
+
+            const syncPager = () => {
+                if (!pager) {
+                    return;
+                }
+
+                [...pager.children].forEach((dot, index) => {
+                    dot.classList.toggle('is-active', index === activeIndex);
+                });
+            };
+
+            const setupAutoAdvance = (renderedElement) => {
+                if (timerId) {
+                    window.clearInterval(timerId);
+                    timerId = null;
+                }
+
+                if (behavior.advanceMode === 'interval') {
+                    timerId = window.setInterval(() => {
+                        advance();
+                    }, behavior.intervalMs);
+                    return;
+                }
+
+                if (behavior.advanceMode === 'video-ended' && renderedElement.tagName === 'VIDEO') {
+                    renderedElement.addEventListener('ended', () => {
+                        advance();
+                    }, { once: true });
+                }
+            };
+
+            const render = () => {
+                const currentItem = items[activeIndex];
+                const label = prettifyMediaName(currentItem.path);
+                const renderedElement = createMediaElement(currentItem, label, {
+                    loopVideo: behavior.advanceMode !== 'video-ended',
+                });
+
+                if (setCaption) {
+                    setCaption(container, label);
+                }
+
+                viewport.replaceChildren(renderedElement);
+                if (activeClass) {
+                    container.classList.add(activeClass);
+                }
+
+                syncPager();
+                setupAutoAdvance(renderedElement);
+            };
+
+            if (behavior.showPager) {
+                pager = document.createElement('div');
+                pager.className = 'media-slot-pager';
+
+                items.forEach((item, index) => {
+                    const dot = document.createElement('button');
+                    dot.type = 'button';
+                    dot.className = 'media-slot-dot';
+                    dot.setAttribute('aria-label', `Show ${prettifyMediaName(item.path)}`);
+                    dot.addEventListener('click', () => {
+                        activeIndex = index;
+                        render();
+                    });
+                    pager.appendChild(dot);
+                });
+
+                container.appendChild(pager);
+            }
+
+            render();
+        }
+
+        function renderGallery(gallery, items) {
+            if (!items || !items.length) {
+                gallery.innerHTML = '<div class="media-empty">Media Coming Soon</div>';
+                return;
+            }
+
+            const layout = partitionMediaForGallery(items);
+            const stage = document.createElement('div');
+            stage.className = 'media-stage';
+
+            const strip = document.createElement('div');
+            strip.className = 'media-strip';
+
+            gallery.replaceChildren(stage);
+            mountRotatingSlot(stage, layout.primary, {
+                activeClass: 'is-active',
+                setCaption: (element, label) => {
+                    element.dataset.caption = label;
+                },
+            });
+
+            const populatedSecondarySlots = layout.secondary.filter((slotItems) => slotItems.length > 0);
+
+            if (populatedSecondarySlots.length === 0) {
+                gallery.classList.add('gallery-solo');
+                return;
+            }
+
+            gallery.classList.remove('gallery-solo');
+            populatedSecondarySlots.forEach((slotItems) => {
+                const slot = document.createElement('div');
+                slot.className = 'media-strip-item';
+                strip.appendChild(slot);
+                mountRotatingSlot(slot, slotItems, {
+                    activeClass: 'is-active',
+                    setCaption: (element, label) => {
+                        element.dataset.caption = label;
+                    },
+                });
+            });
+
+            gallery.appendChild(strip);
+        }
+
+        async function loadMediaManifest() {
+            const response = await fetch('assets/media/media-manifest.json');
+
+            if (!response.ok) {
+                throw new Error('Failed to load media manifest');
+            }
+
+            return response.json();
+        }
+
+        document.addEventListener('DOMContentLoaded', async function() {
+            try {
+                const manifest = await loadMediaManifest();
+
+                document.querySelectorAll('.media-gallery').forEach((gallery) => {
+                    const skill = gallery.dataset.skill;
+                    renderGallery(gallery, manifest[skill] || []);
+                });
+            } catch (error) {
+                document.querySelectorAll('.media-gallery').forEach((gallery) => {
+                    gallery.innerHTML = '<div class="media-empty">Failed To Load Media</div>';
+                });
+                console.error(error);
+            }
+        });
+
+        // Optional: Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skill-item, .publication-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(10px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

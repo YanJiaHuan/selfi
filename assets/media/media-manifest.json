@@ -1,0 +1,74 @@
+{
+  "ai-infrastructure": [
+    {
+      "path": "assets/media/ai-infrastructure/GPU_Monitor.png",
+      "type": "image"
+    }
+  ],
+  "embodied-intelligence": [
+    {
+      "path": "assets/media/embodied-intelligence/File Collection.mp4",
+      "type": "video"
+    },
+    {
+      "path": "assets/media/embodied-intelligence/FPN based networks.png",
+      "type": "image"
+    },
+    {
+      "path": "assets/media/embodied-intelligence/How to define a task.png",
+      "type": "image"
+    },
+    {
+      "path": "assets/media/embodied-intelligence/Mutiple Tasks.mp4",
+      "type": "video"
+    },
+    {
+      "path": "assets/media/embodied-intelligence/Screw Collection.mov",
+      "type": "video"
+    },
+    {
+      "path": "assets/media/embodied-intelligence/Toile Wiping.mp4",
+      "type": "video"
+    },
+    {
+      "path": "assets/media/embodied-intelligence/VR Control.JPG",
+      "type": "image"
+    }
+  ],
+  "foundation-models-training": [
+    {
+      "path": "assets/media/foundation-models-training/Local IDC.PNG",
+      "type": "image"
+    }
+  ],
+  "robotics-simulation": [
+    {
+      "path": "assets/media/robotics-simulation/Bunker+Elite1.png",
+      "type": "image"
+    },
+    {
+      "path": "assets/media/robotics-simulation/Bunker+Elite2.png",
+      "type": "image"
+    },
+    {
+      "path": "assets/media/robotics-simulation/Bunker+Elite3.png",
+      "type": "image"
+    },
+    {
+      "path": "assets/media/robotics-simulation/Franka1.JPG",
+      "type": "image"
+    },
+    {
+      "path": "assets/media/robotics-simulation/Frbot.JPG",
+      "type": "image"
+    },
+    {
+      "path": "assets/media/robotics-simulation/Robot+Manycore.mp4",
+      "type": "video"
+    },
+    {
+      "path": "assets/media/robotics-simulation/SimpleSim.webm",
+      "type": "video"
+    }
+  ]
+}
