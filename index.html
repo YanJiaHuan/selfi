@@ -113,6 +113,17 @@
             min-width: 0;
         }
 
+        .hero-panel {
+            grid-column: 1 / -1;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0)),
+                var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.45);
+            border-radius: 8px;
+            padding: 24px 26px;
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+        }
+
         .hero-portrait {
             aspect-ratio: 4 / 5;
             overflow: hidden;
@@ -236,6 +247,9 @@
             .hero-portrait {
                 aspect-ratio: 16 / 15;
                 max-width: 560px;
+            }
+            .hero-panel {
+                padding: 20px 18px;
             }
         }
 
@@ -665,14 +679,6 @@
                     </ul>
                 </div>
 
-                <div class="intro-section">
-                    <h3>Working Experience</h3>
-                    <ul>
-                        <li>Senior AI Engineer & Co-founder at embodied intelligence startup (May 2024 - Present) — Leading data platform and compute infrastructure development</li>
-                        <li>AI Research Intern at A*STAR, Singapore (Apr 2023 - Aug 2023) — Developed LLM-based Text-to-SQL system, conducted research on prompt engineering and LoRA fine-tuning</li>
-                    </ul>
-                </div>
-
                 <div class="contact-links">
                     <a href="mailto:yjh1337842463@gmail.com" class="contact-link">Email</a>
                     <a href="https://www.linkedin.com/in/jiahuan-yan-416757185/" class="contact-link">LinkedIn</a>
@@ -682,6 +688,14 @@
 
             <div class="hero-portrait">
                 <img src="assets/media/me.JPG" alt="JiaHuan Yan speaking at an event">
+            </div>
+
+            <div class="hero-panel intro-section">
+                <h3>Working Experience</h3>
+                <ul>
+                    <li>Senior AI Engineer & Co-founder at embodied intelligence startup (May 2024 - Present) — Leading data platform and compute infrastructure development</li>
+                    <li>AI Research Intern at A*STAR, Singapore (Apr 2023 - Aug 2023) — Developed LLM-based Text-to-SQL system, conducted research on prompt engineering and LoRA fine-tuning</li>
+                </ul>
             </div>
         </div>
     </section>
