@@ -23,15 +23,23 @@ test("media slots use absolute viewport layering for cross-browser rendering", (
 
   assert.match(
     html,
-    /\.media-slot-viewport\s*\{[\s\S]*position:\s*absolute;[\s\S]*inset:\s*0;/
+    /\.media-stage\s*\{[\s\S]*grid-column:\s*1;/
+  );
+  assert.match(
+    html,
+    /\.media-strip\s*\{[\s\S]*grid-column:\s*2;/
+  );
+  assert.match(
+    html,
+    /\.media-slot-viewport\s*\{[\s\S]*display:\s*grid;/
+  );
+  assert.match(
+    html,
+    /\.media-slide\s*\{[\s\S]*grid-area:\s*1\s*\/\s*1;/
   );
   assert.match(
     html,
     /\.media-slide img,\s*[\s\S]*\.media-slide video\s*\{[\s\S]*display:\s*block;/
-  );
-  assert.match(
-    html,
-    /\.media-slide img,\s*[\s\S]*\.media-slide video\s*\{[\s\S]*position:\s*absolute;[\s\S]*inset:\s*0;/
   );
 });
 
