@@ -427,8 +427,11 @@
         }
 
         .media-slot-viewport {
+            position: absolute;
+            inset: 0;
             width: 100%;
             height: 100%;
+            z-index: 1;
         }
 
         .media-strip {
@@ -504,9 +507,12 @@
         .media-stage video,
         .media-strip-item img,
         .media-strip-item video {
+            position: absolute;
+            inset: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
 
         .media-empty {

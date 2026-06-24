@@ -17,3 +17,20 @@ test("index exposes four technical annual capability chapters", () => {
   assert.match(html, /id="papers-list"/);
   assert.match(html, /papers-data\.json/);
 });
+
+test("media slots use absolute viewport layering for cross-browser rendering", () => {
+  const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
+
+  assert.match(
+    html,
+    /\.media-slot-viewport\s*\{[\s\S]*position:\s*absolute;[\s\S]*inset:\s*0;/
+  );
+  assert.match(
+    html,
+    /\.media-stage img,\s*[\s\S]*\.media-strip-item video\s*\{[\s\S]*display:\s*block;/
+  );
+  assert.match(
+    html,
+    /\.media-stage img,\s*[\s\S]*\.media-strip-item video\s*\{[\s\S]*position:\s*absolute;[\s\S]*inset:\s*0;/
+  );
+});
