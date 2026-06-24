@@ -27,10 +27,35 @@ test("media slots use absolute viewport layering for cross-browser rendering", (
   );
   assert.match(
     html,
-    /\.media-stage img,\s*[\s\S]*\.media-strip-item video\s*\{[\s\S]*display:\s*block;/
+    /\.media-slide img,\s*[\s\S]*\.media-slide video\s*\{[\s\S]*display:\s*block;/
   );
   assert.match(
     html,
-    /\.media-stage img,\s*[\s\S]*\.media-strip-item video\s*\{[\s\S]*position:\s*absolute;[\s\S]*inset:\s*0;/
+    /\.media-slide img,\s*[\s\S]*\.media-slide video\s*\{[\s\S]*position:\s*absolute;[\s\S]*inset:\s*0;/
+  );
+});
+
+test("media carousel pre-renders slides and pauses inactive videos", () => {
+  const html = readFileSync(new URL("../index.html", import.meta.url), "utf8");
+
+  assert.match(
+    html,
+    /\.media-slide\s*\{[\s\S]*opacity:\s*0;[\s\S]*visibility:\s*hidden;/
+  );
+  assert.match(
+    html,
+    /\.media-slide\.is-active\s*\{[\s\S]*opacity:\s*1;[\s\S]*visibility:\s*visible;/
+  );
+  assert.match(
+    html,
+    /const slides = items\.map\(\(item, index\) => \{/
+  );
+  assert.match(
+    html,
+    /viewport\.replaceChildren\(\.\.\.slides\.map\(\(\{\s*slide\s*\}\)\s*=>\s*slide\)\);/
+  );
+  assert.match(
+    html,
+    /mediaElement\.pause\(\);/
   );
 });
